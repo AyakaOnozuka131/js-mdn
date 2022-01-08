@@ -1,4 +1,8 @@
 // ----------------------------
+// 参照URL： Array - JavaScript | MDN
+// https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
+// ----------------------------
+// ----------------------------
 // よくある操作
 // ----------------------------
 // 配列の生成
