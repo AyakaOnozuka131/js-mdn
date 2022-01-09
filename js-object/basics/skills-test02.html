@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+    // name: バンドの名前を表す文字列
+    // nationality: バンドの出身国を表す文字列
+    // genre: バンドが演奏する音楽の種類
+    // members: バンドのメンバー数を表す数字
+    // formed: バンドが結成した年を表す数字
+    // split: バンドが解散した年を表す数字、まだ活動している場合はfalse
+    // albums: そのバンドによってリリースされたアルバムを表す配列。それぞれの配列の要素は、下記の要素を含んだオブジェクトであること
+    // name: アルバムの名前を表す文字列
+    // released: リリースされた年を表す数字
+    // albums 配列には、少なくとも2つのアルバムを含めること。
+    bandInfo = {
+      name: 'King Gnu',
+      nationality: 'Japan',
+      genre: 'J-pop',
+      members: 4,
+      formed: 2015,
+      split: false,
+      albums: [
+        {
+          name: 'Tokyo Rendez-Vous',
+          released: 2017
+        },
+        {
+          name: 'Sympa',
+          released: 2019
+        },
+        {
+          name: 'CEREMONY',
+          released: 2020
+        },
+      ],
+    };
+    bandInfo = `${bandInfo.name} was an ${bandInfo.nationality} ${bandInfo.genre} band which was formed in ${bandInfo.formed} and it keep together until ${bandInfo.split}. The first album was ${bandInfo.albums[0].name} in ${bandInfo.albums[0].released}.`;
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
