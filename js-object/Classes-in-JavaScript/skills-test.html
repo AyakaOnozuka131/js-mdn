@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OOJS skills test</title>
+  </head>
+
+  <body>
+
+  </body>
+
+    <script>
+      class Shape {
+        constructor(name, sides, sideLength){
+          this.name = name;
+          this.sides = sides;
+          this.sideLength = sideLength;
+        }
+        calcPerimeter() {
+          console.log(this.sideLength * 4);
+        }
+      };
+      // const square = new Shape('square', 5, 5);
+      // square.calcPerimeter();
+      // const triangle = new Shape('square', 3, 3);
+      // triangle.calcPerimeter();
+
+      class Square extends Shape {
+        constructor(name, sides, sideLength) {
+          super(name, sides, sideLength);
+          this.name = 'square';
+          this.sides = 4;
+        }
+        calcArea() {
+          console.log(this.sideLength * this.sideLength);
+        }
+      };
+      const square = new Square('square', 5, 5);
+      square.calcPerimeter();
+      square.calcArea();
+    </script>
+</html>
